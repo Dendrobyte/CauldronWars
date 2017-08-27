@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a20f005e-67ab-40f5-b991-42c95dbf8bdb" name="Default" comment="">
+    <list default="true" id="a20f005e-67ab-40f5-b991-42c95dbf8bdb" name="Default" comment="Just editing this...">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,22 +29,18 @@
       <file leaf-file-name="RunningArenaManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/arenas/RunningArenaManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="5922">
               <caret line="350" column="64" lean-forward="false" selection-start-line="350" selection-start-column="64" selection-end-line="350" selection-end-column="64" />
-              <folding>
-                <marker date="1503805560501" expanded="false" signature="16814:16824" ph=" { " />
-                <marker date="1503805560501" expanded="false" signature="16854:16860" ph=" }" />
-                <marker date="1503805560501" expanded="true" signature="16915:16945" ph="{...}" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="35" column="54" lean-forward="false" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+            <state relative-caret-position="414">
+              <caret line="57" column="76" lean-forward="false" selection-start-line="57" selection-start-column="76" selection-end-line="57" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -52,29 +48,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PlayerHitListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/listeners/PlayerHitListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1404">
+            <state relative-caret-position="1476">
               <caret line="103" column="13" lean-forward="false" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
-              <folding>
-                <marker date="1503805560651" expanded="true" signature="5890:6567" ph="{...}" />
-                <marker date="1503805560651" expanded="true" signature="6641:7151" ph="{...}" />
-                <marker date="1503805560651" expanded="true" signature="7222:10066" ph="{...}" />
-                <marker date="1503805560651" expanded="true" signature="10109:10664" ph="{...}" />
-                <marker date="1503805560651" expanded="true" signature="10239:10356" ph="{...}" />
-                <marker date="1503805560651" expanded="true" signature="10393:10661" ph="{...}" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -92,7 +71,7 @@
       <file leaf-file-name="CWarsMainCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/commands/CWarsMainCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
+            <state relative-caret-position="756">
               <caret line="61" column="13" lean-forward="false" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
               <folding>
                 <marker date="1503805560512" expanded="true" signature="2301:15971" ph="{...}" />
@@ -106,14 +85,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
               <caret line="38" column="67" lean-forward="false" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
-              <folding>
-                <marker date="1503805560718" expanded="false" signature="867:873" ph=" }" />
-                <marker date="1503805560718" expanded="false" signature="913:923" ph=" { " />
-                <marker date="1503805560718" expanded="false" signature="936:942" ph=" }" />
-                <marker date="1503805560718" expanded="false" signature="977:987" ph=" { " />
-                <marker date="1503805560718" expanded="false" signature="1008:1014" ph=" }" />
-                <marker date="1503805560718" expanded="true" signature="1051:3780" ph="{...}" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,38 +95,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="18">
               <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-              <folding>
-                <marker date="1503805560769" expanded="true" signature="40:49" ph="Mobkinz78" />
-                <marker date="1503805560769" expanded="true" signature="56:85" ph="com.redst…ft.me.Main" />
-                <marker date="1503805560769" expanded="true" signature="99:163" ph="A minigam…Oinkcraft!" />
-                <marker date="1503805560769" expanded="true" signature="164:409" ph="commands: &lt;3 keys&gt;" />
-                <marker date="1503805560769" expanded="true" signature="176:272" ph="cauldronwars: &lt;2 keys&gt;" />
-                <marker date="1503805560769" expanded="true" signature="207:247" ph="The main …everything" />
-                <marker date="1503805560769" expanded="true" signature="252:272" ph="aliases: [2 items]" />
-                <marker date="1503805560769" expanded="true" signature="262:264" ph="cw" />
-                <marker date="1503805560769" expanded="true" signature="266:271" ph="cwars" />
-                <marker date="1503805560769" expanded="true" signature="275:346" ph="cwarsarena: &lt;1 key&gt;" />
-                <marker date="1503805560769" expanded="true" signature="304:346" ph="The comma…g an arena" />
-                <marker date="1503805560769" expanded="true" signature="349:409" ph="cwshout: &lt;1 key&gt;" />
-                <marker date="1503805560769" expanded="true" signature="375:409" ph="Let's pla…ublic chat" />
-                <marker date="1503805560769" expanded="true" signature="410:1116" ph="permissions: &lt;8 keys&gt;" />
-                <marker date="1503805560769" expanded="true" signature="425:493" ph="cauldronwars.use: &lt;1 key&gt;" />
-                <marker date="1503805560769" expanded="true" signature="460:493" ph="Base perm…ldronwars." />
-                <marker date="1503805560769" expanded="true" signature="496:583" ph="cauldronwars.sign: &lt;1 key&gt;" />
-                <marker date="1503805560769" expanded="true" signature="532:583" ph="Allows a …dron wars." />
-                <marker date="1503805560769" expanded="true" signature="586:693" ph="cauldronwars.arena: &lt;1 key&gt;" />
-                <marker date="1503805560769" expanded="true" signature="623:693" ph="Lets a pl…teCommand." />
-                <marker date="1503805560769" expanded="true" signature="696:781" ph="cauldronwars.kit: &lt;1 key&gt;" />
-                <marker date="1503805560769" expanded="true" signature="731:781" ph="Lets a pl…ose a kit." />
-                <marker date="1503805560769" expanded="true" signature="784:872" ph="cauldronw….kit.donor: &lt;1 key&gt;" />
-                <marker date="1503805560769" expanded="true" signature="825:872" ph="Lets play…ded later." />
-                <marker date="1503805560769" expanded="true" signature="875:944" ph="cauldronw…ign.create: &lt;1 key&gt;" />
-                <marker date="1503805560769" expanded="true" signature="918:944" ph="Lets play…ate signs." />
-                <marker date="1503805560769" expanded="true" signature="947:1022" ph="cauldronwars.leave: &lt;1 key&gt;" />
-                <marker date="1503805560769" expanded="true" signature="984:1022" ph="Lets play…ey are in." />
-                <marker date="1503805560769" expanded="true" signature="1025:1116" ph="cauldronwars.break: &lt;1 key&gt;" />
-                <marker date="1503805560769" expanded="true" signature="1062:1116" ph="Lets play…ame world." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -289,7 +230,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -331,8 +271,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,7 +285,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://G:/Oinkcraft/Cauldron Wars/Project/src/com/redstoneoinkcraft/me/arenas/RunningArenaManager.java" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
@@ -650,7 +591,9 @@
       <workItem from="1502853230067" duration="21310000" />
       <workItem from="1502987025777" duration="30000" />
       <workItem from="1503145845781" duration="1000" />
-      <workItem from="1503805684569" duration="1203000" />
+      <workItem from="1503805684569" duration="1602000" />
+      <workItem from="1503843240968" duration="164000" />
+      <workItem from="1503844105450" duration="152000" />
     </task>
     <task id="LOCAL-00001" summary="Just uploading this so I can write that kits have been changed to GUI and the CauldronWars plugin is now on a GitLab server :D">
       <created>1503344596182</created>
@@ -694,11 +637,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503806883799</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Just editing this...">
+      <created>1503806913221</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1503806913221</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="300227000" />
+    <option name="totallyTimeSpent" value="300942000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -711,8 +661,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -722,8 +672,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997879" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -744,7 +694,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Just uploading this so I can write that kits have been changed to GUI and the CauldronWars plugin is now on a GitLab server :D" />
     <MESSAGE value="Added a maven repo and pom.xml file!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a maven repo and pom.xml file!" />
+    <MESSAGE value="Just editing this..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Just editing this..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1025,7 +976,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
           <caret line="60" column="80" lean-forward="false" selection-start-line="60" selection-start-column="80" selection-end-line="60" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1039,28 +989,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/listeners/PlayerHitListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1404">
+        <state relative-caret-position="1476">
           <caret line="103" column="13" lean-forward="false" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
-          <folding>
-            <marker date="1503805560651" expanded="true" signature="5890:6567" ph="{...}" />
-            <marker date="1503805560651" expanded="true" signature="6641:7151" ph="{...}" />
-            <marker date="1503805560651" expanded="true" signature="7222:10066" ph="{...}" />
-            <marker date="1503805560651" expanded="true" signature="10109:10664" ph="{...}" />
-            <marker date="1503805560651" expanded="true" signature="10239:10356" ph="{...}" />
-            <marker date="1503805560651" expanded="true" signature="10393:10661" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/arenas/RunningArenaManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="5922">
           <caret line="350" column="64" lean-forward="false" selection-start-line="350" selection-start-column="64" selection-end-line="350" selection-end-column="64" />
-          <folding>
-            <marker date="1503805560501" expanded="false" signature="16814:16824" ph=" { " />
-            <marker date="1503805560501" expanded="false" signature="16854:16860" ph=" }" />
-            <marker date="1503805560501" expanded="true" signature="16915:16945" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1069,13 +1008,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="666">
           <caret line="45" column="110" lean-forward="false" selection-start-line="45" selection-start-column="110" selection-end-line="45" selection-end-column="110" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/commands/CWarsMainCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
+        <state relative-caret-position="756">
           <caret line="61" column="13" lean-forward="false" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
           <folding>
             <marker date="1503805560512" expanded="true" signature="2301:15971" ph="{...}" />
@@ -1087,14 +1025,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="38" column="67" lean-forward="false" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
-          <folding>
-            <marker date="1503805560718" expanded="false" signature="867:873" ph=" }" />
-            <marker date="1503805560718" expanded="false" signature="913:923" ph=" { " />
-            <marker date="1503805560718" expanded="false" signature="936:942" ph=" }" />
-            <marker date="1503805560718" expanded="false" signature="977:987" ph=" { " />
-            <marker date="1503805560718" expanded="false" signature="1008:1014" ph=" }" />
-            <marker date="1503805560718" expanded="true" signature="1051:3780" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1102,38 +1033,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-          <folding>
-            <marker date="1503805560769" expanded="true" signature="40:49" ph="Mobkinz78" />
-            <marker date="1503805560769" expanded="true" signature="56:85" ph="com.redst…ft.me.Main" />
-            <marker date="1503805560769" expanded="true" signature="99:163" ph="A minigam…Oinkcraft!" />
-            <marker date="1503805560769" expanded="true" signature="164:409" ph="commands: &lt;3 keys&gt;" />
-            <marker date="1503805560769" expanded="true" signature="176:272" ph="cauldronwars: &lt;2 keys&gt;" />
-            <marker date="1503805560769" expanded="true" signature="207:247" ph="The main …everything" />
-            <marker date="1503805560769" expanded="true" signature="252:272" ph="aliases: [2 items]" />
-            <marker date="1503805560769" expanded="true" signature="262:264" ph="cw" />
-            <marker date="1503805560769" expanded="true" signature="266:271" ph="cwars" />
-            <marker date="1503805560769" expanded="true" signature="275:346" ph="cwarsarena: &lt;1 key&gt;" />
-            <marker date="1503805560769" expanded="true" signature="304:346" ph="The comma…g an arena" />
-            <marker date="1503805560769" expanded="true" signature="349:409" ph="cwshout: &lt;1 key&gt;" />
-            <marker date="1503805560769" expanded="true" signature="375:409" ph="Let's pla…ublic chat" />
-            <marker date="1503805560769" expanded="true" signature="410:1116" ph="permissions: &lt;8 keys&gt;" />
-            <marker date="1503805560769" expanded="true" signature="425:493" ph="cauldronwars.use: &lt;1 key&gt;" />
-            <marker date="1503805560769" expanded="true" signature="460:493" ph="Base perm…ldronwars." />
-            <marker date="1503805560769" expanded="true" signature="496:583" ph="cauldronwars.sign: &lt;1 key&gt;" />
-            <marker date="1503805560769" expanded="true" signature="532:583" ph="Allows a …dron wars." />
-            <marker date="1503805560769" expanded="true" signature="586:693" ph="cauldronwars.arena: &lt;1 key&gt;" />
-            <marker date="1503805560769" expanded="true" signature="623:693" ph="Lets a pl…teCommand." />
-            <marker date="1503805560769" expanded="true" signature="696:781" ph="cauldronwars.kit: &lt;1 key&gt;" />
-            <marker date="1503805560769" expanded="true" signature="731:781" ph="Lets a pl…ose a kit." />
-            <marker date="1503805560769" expanded="true" signature="784:872" ph="cauldronw….kit.donor: &lt;1 key&gt;" />
-            <marker date="1503805560769" expanded="true" signature="825:872" ph="Lets play…ded later." />
-            <marker date="1503805560769" expanded="true" signature="875:944" ph="cauldronw…ign.create: &lt;1 key&gt;" />
-            <marker date="1503805560769" expanded="true" signature="918:944" ph="Lets play…ate signs." />
-            <marker date="1503805560769" expanded="true" signature="947:1022" ph="cauldronwars.leave: &lt;1 key&gt;" />
-            <marker date="1503805560769" expanded="true" signature="984:1022" ph="Lets play…ey are in." />
-            <marker date="1503805560769" expanded="true" signature="1025:1116" ph="cauldronwars.break: &lt;1 key&gt;" />
-            <marker date="1503805560769" expanded="true" signature="1062:1116" ph="Lets play…ame world." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1141,25 +1041,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="26" column="15" lean-forward="false" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="35" column="54" lean-forward="false" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+        <state relative-caret-position="414">
+          <caret line="57" column="76" lean-forward="false" selection-start-line="57" selection-start-column="76" selection-end-line="57" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
