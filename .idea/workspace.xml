@@ -6,9 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a20f005e-67ab-40f5-b991-42c95dbf8bdb" name="Default" comment="Added a maven repo and pom.xml file!">
+    <list default="true" id="a20f005e-67ab-40f5-b991-42c95dbf8bdb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -187,6 +186,11 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Merk &lt;mobkinz78@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -646,7 +650,7 @@
       <workItem from="1502853230067" duration="21310000" />
       <workItem from="1502987025777" duration="30000" />
       <workItem from="1503145845781" duration="1000" />
-      <workItem from="1503805684569" duration="1176000" />
+      <workItem from="1503805684569" duration="1203000" />
     </task>
     <task id="LOCAL-00001" summary="Just uploading this so I can write that kits have been changed to GUI and the CauldronWars plugin is now on a GitLab server :D">
       <created>1503344596182</created>
@@ -683,11 +687,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503806481301</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added a maven repo and pom.xml file!">
+      <created>1503806883799</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1503806883799</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="300200000" />
+    <option name="totallyTimeSpent" value="300227000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
