@@ -1,0 +1,29 @@
+# Arena Information
+# Format is as follows. Recommended that you do not change ANYTHING in here as it is all done in game.
+# arenas: - The initial path for all arenas. Everything following is a subpath of this initial path.
+# id: int - Each arena will have an assigned ID to identify it. IDs will be used for editing arena information.
+# name: string - Each arena will have a name for ease of remembering arenas and listing existing ones. Names can not be used for editing, however.
+# location: X, Y, Z - Initial location for arenas. Same as the one you teleport to.
+# spawnpoints: - Path for the beginning of team spawnpoints. Planned future implementation (possibly) for more than one team.
+#   teamBlue: X, Y, Z - Location for team blue's spawn. Subpath of 'spawnpoints'
+#   teamRed: X, y, Z - Location for team red's spawn. Subpath of 'spawnpoints'
+# cauldrons: - Path for the beginning of each team's cauldron.
+#   teamBlue: X, Y, Z - Location for team blue's cauldron.
+#   teamRed: X, Y, Z - Location for team red's cauldron.
+# lobby: X, Y, Z - Lobby where players wait for the game to start. Recommended this be placed near the map, and one per map. Not necessary, however.
+# bounds: - This are the bounds set for the level when spawning a bottle. Does not support multiple levels.
+# (Considered that in the future, bottles would be spawned at the top of the map and would fall. Expire if they are there for more than 30 seconds in case of incorrect location)
+# (For now, just one platform)
+#   pointOneX: double
+#   pointOneY: double
+#   pointOneZ: double
+#   pointTwoX: double
+#   pointTwoY: double
+#   pointTwoZ: double
+# Other things
+# existing-arenas: - Amount of currently made arenas. Do not change!
+# list-of-arenas: - A list of arenas for checking duplicates, getting amount, etc. Do not change!
+existing-arenas: 0
+list-of-arenas:
+
+arenas:
