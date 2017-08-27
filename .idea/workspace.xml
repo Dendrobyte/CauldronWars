@@ -6,8 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a20f005e-67ab-40f5-b991-42c95dbf8bdb" name="Default" comment="">
+    <list default="true" id="a20f005e-67ab-40f5-b991-42c95dbf8bdb" name="Default" comment="Added a maven repo and pom.xml file!">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -43,9 +44,11 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="630">
+              <caret line="35" column="54" lean-forward="false" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,8 +56,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="733">
-              <caret line="46" column="21" lean-forward="false" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+            <state relative-caret-position="648">
+              <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -194,7 +197,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/redstoneoinkcraft/me/timers/ItemAboveHeadSpawner.java" />
         <option value="$PROJECT_DIR$/src/com/redstoneoinkcraft/me/arenas/test.java" />
         <option value="$PROJECT_DIR$/src/com/redstoneoinkcraft/me/arenas/test2.java" />
         <option value="$PROJECT_DIR$/src/com/redstoneoinkcraft/me/kits/Ghost.java" />
@@ -244,6 +246,7 @@
         <option value="$PROJECT_DIR$/src/com/redstoneoinkcraft/me/commands/CWarsMainCommand.java" />
         <option value="$PROJECT_DIR$/src/com/redstoneoinkcraft/me/timers/GameStartTimer.java" />
         <option value="$PROJECT_DIR$/src/com/redstoneoinkcraft/me/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/Main.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
@@ -337,7 +340,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://G:/Oinkcraft/Cauldron Wars/Project/src/com/redstoneoinkcraft/me/arenas/RunningArenaManager.java" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
@@ -643,7 +646,7 @@
       <workItem from="1502853230067" duration="21310000" />
       <workItem from="1502987025777" duration="30000" />
       <workItem from="1503145845781" duration="1000" />
-      <workItem from="1503805684569" duration="843000" />
+      <workItem from="1503805684569" duration="1176000" />
     </task>
     <task id="LOCAL-00001" summary="Just uploading this so I can write that kits have been changed to GUI and the CauldronWars plugin is now on a GitLab server :D">
       <created>1503344596182</created>
@@ -684,7 +687,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="299867000" />
+    <option name="totallyTimeSpent" value="300200000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1133,16 +1136,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="630">
+          <caret line="35" column="54" lean-forward="false" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="733">
-          <caret line="46" column="21" lean-forward="false" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+        <state relative-caret-position="648">
+          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
           <folding />
         </state>
       </provider>
