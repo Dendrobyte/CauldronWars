@@ -120,7 +120,7 @@ public class RunningArenaManager {
             }
         player.sendMessage(prefix + "If bottles spawn unreachably, they respawn.");
         player.sendMessage(prefix + "Teammates have colored wool above their heads.");
-        if(playerAmount == 6){
+        if(playerAmount >= 6){
             if(ram.getRunningArena(id).getGameState().equals(RunningArena.GameState.STARTING)){
                 return;
             }
@@ -346,6 +346,8 @@ public class RunningArenaManager {
         ArrayList<String> mapDesc = new ArrayList<>();
         mapDesc.add(0, "§d§l-+Welcome to Cauldron Wars-+");
         mapDesc.add(1, "§3§oIdea by §b§o@AerZork");
+        mapDesc.add(2, "Improperly configured");
+        mapDesc.add(3, "Improperly configured");
         mapDesc.add(2, "§7-+§bMap §cInformation§7+-");
         mapDesc.add(5, "§7§lWondering How to Play? Use §a/cwars help§7 for more info");
         if(!Main.getInstance().getConfig().getStringList("list-of-arenas").contains(arenaName)){
@@ -355,8 +357,8 @@ public class RunningArenaManager {
         if(Main.getInstance().getConfig().getStringList("list-of-arenas").contains(arenaName)){
 
             if(arenaName.contains("rc_skyisland")){
-                mapDesc.add(3, "§7§oMap Name: §r§cSky Island House");
-                mapDesc.add(4, "§7§oMap Author: §r§cRedCloud_Ninja");
+                mapDesc.set(3, "§7§oMap Name: §r§cSky Island House");
+                mapDesc.set(4, "§7§oMap Author: §r§cRedCloud_Ninja");
                 return mapDesc;
             }
             if(arenaName.contains("rc_jungle")){

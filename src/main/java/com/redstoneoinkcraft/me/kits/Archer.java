@@ -24,12 +24,12 @@ public class Archer extends KitBase {
         int effectDuration = 999999;
         // Armor
         ItemStack helmet = new ItemStack(Material.LEATHER_HELMET, 1);
-        helmet.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
+        helmet.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
         ItemStack chestplate = new ItemStack(Material.CHAINMAIL_CHESTPLATE, 1);
-        chestplate.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
+        chestplate.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
         ItemStack leggings = new ItemStack(Material.AIR, 1); // Could change to chainmail if buff is needed
         ItemStack boots = new ItemStack(Material.LEATHER_BOOTS, 1);
-        boots.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
+        boots.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
         addArmorItem(helmet);
         addArmorItem(chestplate);
         addArmorItem(leggings);
@@ -39,14 +39,14 @@ public class Archer extends KitBase {
         ItemStack bowFire = new ItemStack(Material.BOW, 1);
         bowFire.addEnchantment(Enchantment.ARROW_FIRE, 1);
         bowFire.addEnchantment(Enchantment.ARROW_INFINITE, 1);
-        bowFire.addEnchantment(Enchantment.ARROW_DAMAGE, 1);
+        bowFire.addEnchantment(Enchantment.ARROW_DAMAGE, 2);
         ItemMeta bowFireMeta = bowFire.getItemMeta();
         bowFireMeta.setDisplayName("§c§lFlame Bow");
         bowFire.setItemMeta(bowFireMeta);
         ItemStack bowPunch = new ItemStack(Material.BOW, 1);
         bowPunch.addEnchantment(Enchantment.ARROW_KNOCKBACK, 2);
         bowPunch.addEnchantment(Enchantment.ARROW_INFINITE, 1);
-        bowPunch.addEnchantment(Enchantment.ARROW_DAMAGE, 2);
+        bowPunch.addEnchantment(Enchantment.ARROW_DAMAGE, 1);
         ItemMeta bowPunchMeta = bowPunch.getItemMeta();
         bowPunchMeta.setDisplayName("§6§lPunch Bow");
         bowPunch.setItemMeta(bowPunchMeta);

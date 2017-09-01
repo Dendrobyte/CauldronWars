@@ -27,14 +27,14 @@ public class Gladiator extends KitBase {
         helmet.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
         helmet.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
         ItemStack chestplate = new ItemStack(Material.DIAMOND_CHESTPLATE, 1);
-        chestplate.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
-        chestplate.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 1);
+        chestplate.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
+        chestplate.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
         ItemStack leggings = new ItemStack(Material.IRON_LEGGINGS, 1);
         leggings.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
         leggings.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
         ItemStack boots = new ItemStack(Material.DIAMOND_BOOTS, 1);
-        boots.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
-        boots.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 1);
+        boots.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
+        boots.addEnchantment(Enchantment.PROTECTION_PROJECTILE, 2);
         addArmorItem(helmet);
         addArmorItem(chestplate);
         addArmorItem(leggings);

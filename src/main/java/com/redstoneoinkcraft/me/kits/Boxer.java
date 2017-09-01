@@ -24,11 +24,11 @@ public class Boxer extends KitBase {
         ItemStack helmet = new ItemStack(Material.DIAMOND_HELMET);
         helmet.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
         ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE);
-        chestplate.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
+        chestplate.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
         ItemStack leggings = new ItemStack(Material.IRON_LEGGINGS);
         leggings.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
         ItemStack boots = new ItemStack(Material.IRON_BOOTS);
-        boots.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
+        boots.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
         addArmorItem(helmet);
         addArmorItem(chestplate);
         addArmorItem(leggings);
@@ -43,7 +43,7 @@ public class Boxer extends KitBase {
         addItem(regenPotion);
 
         // Potion Effects
-        PotionEffect strength = new PotionEffect(PotionEffectType.INCREASE_DAMAGE, effectDuration, 2);
+        PotionEffect strength = new PotionEffect(PotionEffectType.INCREASE_DAMAGE, effectDuration, 1);
         PotionEffect speed = new PotionEffect(PotionEffectType.SPEED, effectDuration, 1);
         addPotionEffect(strength);
         addPotionEffect(speed);

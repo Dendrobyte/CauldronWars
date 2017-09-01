@@ -31,8 +31,6 @@ import java.util.List;
  */
 public class CWarsMainCommand implements CommandExecutor {
 
-    // This class is all the commands except for arena creation... don't even know what those will be yet :P
-    // Manage all joining of games through commands...?
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(!(sender instanceof Player)){ // General check in case sender isn't a player...
@@ -46,13 +44,18 @@ public class CWarsMainCommand implements CommandExecutor {
         RunningArenaManager ram = RunningArenaManager.getManager();
 
         if(command.getName().equalsIgnoreCase("cauldronwars")){ // Command time!
+            if(args.length < 1){
+                player.sendMessage("§7-+[§bCauldron §cWars §7Help Menu]+-");
+                player.sendMessage("§7/cauldronwars list - List running arenas");
+                player.sendMessage("§7/cauldronwars create - Create a running arena");
+                player.sendMessage("§7/cauldronwars join - Join a running arena");
+                player.sendMessage("§7/cwarsarena create <name> - Create a new map");
+                return false;
+            }
             if(args[0].equalsIgnoreCase("help")){
                 CwarsHelpTimer cht = new CwarsHelpTimer(player);
                 cht.runTaskTimer(Main.getInstance(), 0, 20);
                 return true;
-            }
-            if(args.length < 1){
-                return false;
             }
             if(player.hasPermission("cauldronwars.leave")){
                 if(args.length < 1){

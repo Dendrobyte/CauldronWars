@@ -24,14 +24,14 @@ public class FlyingPig extends KitBase {
         int effectDuration = 999999;
         // Armor
         ItemStack helmet = new ItemStack(Material.GOLD_HELMET, 1);
-        helmet.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
+        helmet.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
         helmet.addUnsafeEnchantment(Enchantment.DURABILITY, 10);
         ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE, 1);
-        chestplate.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
+        chestplate.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
         ItemStack leggings = new ItemStack(Material.LEATHER_LEGGINGS, 1); // Could change to chainmail if buff is needed
         leggings.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
         ItemStack boots = new ItemStack(Material.DIAMOND_BOOTS, 1);
-        boots.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
+        boots.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
         boots.addUnsafeEnchantment(Enchantment.PROTECTION_FALL, 10);
         addArmorItem(helmet);
         addArmorItem(chestplate);

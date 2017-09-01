@@ -44,7 +44,7 @@ public class ItemAboveHeadSpawner extends BukkitRunnable {
                 World world = ra.getLobby().getWorld();
                 double newLocY = player.getEyeLocation().getY();
                 Location itemLoc = new Location(world, player.getEyeLocation().getX(), newLocY, player.getEyeLocation().getZ());
-                Entity droppedItemBlue = world.dropItem(itemLoc, blueWool);
+                final Entity droppedItemBlue = world.dropItem(itemLoc, blueWool);
                 droppedItemBlue.setVelocity(new Vector(0.00, 0.40, 0.00));
                 new BukkitRunnable(){
                     @Override
@@ -61,7 +61,7 @@ public class ItemAboveHeadSpawner extends BukkitRunnable {
                 World world = ra.getLobby().getWorld();
                 double newLocY = player.getEyeLocation().getY();
                 Location itemLoc = new Location(world, player.getEyeLocation().getX(), newLocY, player.getEyeLocation().getZ());
-                Entity droppedItemRed = world.dropItem(itemLoc, redWool);
+                final Entity droppedItemRed = world.dropItem(itemLoc, redWool);
                 droppedItemRed.setVelocity(new Vector(0.00, 0.40, 0.00));
                 new BukkitRunnable(){
                     @Override

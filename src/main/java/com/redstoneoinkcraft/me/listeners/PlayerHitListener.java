@@ -50,6 +50,9 @@ public class PlayerHitListener implements Listener {
 
             // Different team special items
             ItemStack item = attacker.getInventory().getItemInMainHand();
+            if(item == null){
+                return;
+            }
             // Mummy Items
             if(item.getItemMeta().getDisplayName().equals("§c§lSickening Flesh")){
                 hungerChanceWithFlesh(attacker, defender);
@@ -88,6 +91,7 @@ public class PlayerHitListener implements Listener {
 
                 else {
                     attacker.sendMessage(Main.getInstance().getPrefix() + "§c§lThat player is on your team!");
+                    event.setCancelled(true);
                     return;
                 }
             }
