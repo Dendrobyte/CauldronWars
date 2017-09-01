@@ -7,25 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a20f005e-67ab-40f5-b991-42c95dbf8bdb" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/spigot_1_12_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Project/config.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Project/plugin.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Project/plugin.ymlk" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/CauldronWars.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/CauldronWars.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project.iml" afterPath="$PROJECT_DIR$/Project.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/arenas/RunningArenaManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/arenas/RunningArenaManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/commands/CWarsMainCommand.java" afterPath="$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/commands/CWarsMainCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/kits/Archer.java" afterPath="$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/kits/Archer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/kits/Boxer.java" afterPath="$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/kits/Boxer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/kits/FlyingPig.java" afterPath="$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/kits/FlyingPig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/kits/Gladiator.java" afterPath="$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/kits/Gladiator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/listeners/PlayerHitListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/listeners/PlayerHitListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/timers/ItemAboveHeadSpawner.java" afterPath="$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/timers/ItemAboveHeadSpawner.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/config.yml" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/plugin.yml" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -87,8 +69,8 @@
       <file leaf-file-name="PlayerHitListener.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/listeners/PlayerHitListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+            <state relative-caret-position="810">
+              <caret line="89" column="17" lean-forward="true" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -668,7 +650,7 @@
       <workItem from="1504102287289" duration="1215000" />
       <workItem from="1504198665241" duration="899000" />
       <workItem from="1504237282727" duration="463000" />
-      <workItem from="1504281914414" duration="568000" />
+      <workItem from="1504281914414" duration="632000" />
     </task>
     <task id="LOCAL-00001" summary="Just uploading this so I can write that kits have been changed to GUI and the CauldronWars plugin is now on a GitLab server :D">
       <created>1503344596182</created>
@@ -740,11 +722,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503844386139</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="PlayerHitListener throwing NPE if no item in hand and a special item check is run. Fixed!">
+      <created>1504282523289</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1504282523290</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="307274000" />
+    <option name="totallyTimeSpent" value="307338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -791,7 +780,8 @@
     <MESSAGE value="Just uploading this so I can write that kits have been changed to GUI and the CauldronWars plugin is now on a GitLab server :D" />
     <MESSAGE value="Added a maven repo and pom.xml file!" />
     <MESSAGE value="Just editing this..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Just editing this..." />
+    <MESSAGE value="PlayerHitListener throwing NPE if no item in hand and a special item check is run. Fixed!" />
+    <option name="LAST_COMMIT_MESSAGE" value="PlayerHitListener throwing NPE if no item in hand and a special item check is run. Fixed!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1149,8 +1139,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redstoneoinkcraft/me/listeners/PlayerHitListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+        <state relative-caret-position="810">
+          <caret line="89" column="17" lean-forward="true" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
           <folding />
         </state>
       </provider>
