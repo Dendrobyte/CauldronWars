@@ -48,20 +48,7 @@ public class PlayerHitListener implements Listener {
             }
             RunningArena ra = ram.isInGame(attacker); // Works for both, anyway
 
-            // Different team special items
             ItemStack item = attacker.getInventory().getItemInMainHand();
-            if(item == null){
-                return;
-            }
-            // Mummy Items
-            if(item.getItemMeta().getDisplayName().equals("§c§lSickening Flesh")){
-                hungerChanceWithFlesh(attacker, defender);
-                return;
-            }
-            if(item.getItemMeta().getDisplayName().equals("§7§lLeftover Mummy Wraps")){
-                cobwebsChanceOnHit(attacker, defender);
-                return;
-            }
 
             // Same team special items
             if(ra.getTeamBlue().contains(attacker) && ra.getTeamBlue().contains(defender)){
@@ -94,6 +81,17 @@ public class PlayerHitListener implements Listener {
                     event.setCancelled(true);
                     return;
                 }
+            }
+
+            // Different team special items
+            // Mummy Items
+            if(item.getItemMeta().getDisplayName().equals("§c§lSickening Flesh")){
+                hungerChanceWithFlesh(attacker, defender);
+                return;
+            }
+            if(item.getItemMeta().getDisplayName().equals("§7§lLeftover Mummy Wraps")){
+                cobwebsChanceOnHit(attacker, defender);
+                return;
             }
 
         }
