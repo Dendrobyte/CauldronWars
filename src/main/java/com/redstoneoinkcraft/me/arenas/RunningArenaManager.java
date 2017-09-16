@@ -376,7 +376,7 @@ public class RunningArenaManager {
                 mapDesc.set(4, "§7§oMap Author: §r§cstarmax1000");
                 return mapDesc;
             }
-            if(arenaName.contains("za_weatherstation")){
+            if(arenaName.contains("za_weather")){
                 mapDesc.set(3, "§7§oMap Name: §r§cWeather Station");
                 mapDesc.set(4, "§7§oMap Author: §r§cZaphoo");
                 return mapDesc;
