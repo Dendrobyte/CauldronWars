@@ -346,9 +346,9 @@ public class RunningArenaManager {
         ArrayList<String> mapDesc = new ArrayList<>();
         mapDesc.add(0, "§d§l-+Welcome to Cauldron Wars-+");
         mapDesc.add(1, "§3§oIdea by §b§o@AerZork");
-        mapDesc.add(2, "Improperly configured");
-        mapDesc.add(3, "Improperly configured");
         mapDesc.add(2, "§7-+§bMap §cInformation§7+-");
+        mapDesc.add(3, "Improperly configured");
+        mapDesc.add(4, "Improperly configured");
         mapDesc.add(5, "§7§lWondering How to Play? Use §a/cwars help§7 for more info");
         if(!Main.getInstance().getConfig().getStringList("list-of-arenas").contains(arenaName)){
             //player.sendMessage(prefix + "§cSorry, the arena §c§l'" + args[1] + "'§r§c does not exist!");
@@ -362,32 +362,32 @@ public class RunningArenaManager {
                 return mapDesc;
             }
             if(arenaName.contains("rc_jungle")){
-                mapDesc.add(3, "§7§oMap Name: §r§cMelon Jungle");
-                mapDesc.add(4, "§7§oMap Author: §r§cRedCloud_Ninja");
+                mapDesc.set(3, "§7§oMap Name: §r§cMelon Jungle");
+                mapDesc.set(4, "§7§oMap Author: §r§cRedCloud_Ninja");
                 return mapDesc;
             }
             if(arenaName.contains("mgxc_bridge")){
-                mapDesc.add(3, "§7§oMap Name: §r§cUnder the Bridge");
-                mapDesc.add(4, "§7§oMap Authors: §r§cthat_melon_gamer");
+                mapDesc.set(3, "§7§oMap Name: §r§cUnder the Bridge");
+                mapDesc.set(4, "§7§oMap Authors: §r§cthat_melon_gamer");
                 return mapDesc;
             }
             if(arenaName.contains("smax_imbalance")){
-                mapDesc.add(3, "§7§oMap Name: §r§cImbalance");
-                mapDesc.add(4, "§7§oMap Author: §r§cstarmax1000");
+                mapDesc.set(3, "§7§oMap Name: §r§cImbalance");
+                mapDesc.set(4, "§7§oMap Author: §r§cstarmax1000");
                 return mapDesc;
             }
             if(arenaName.contains("za_weatherstation")){
-                mapDesc.add(3, "§7§oMap Name: §r§cWeather Station");
-                mapDesc.add(4, "§7§oMap Author: §r§cZaphoo");
+                mapDesc.set(3, "§7§oMap Name: §r§cWeather Station");
+                mapDesc.set(4, "§7§oMap Author: §r§cZaphoo");
                 return mapDesc;
             }
             if(arenaName.contains("testmap") || arenaName.contains("testing")){
-                mapDesc.add(3, "Test map!");
-                mapDesc.add(4, "Test map!");
+                mapDesc.set(3, "Test map!");
+                mapDesc.set(4, "Test map!");
                 return mapDesc;
             }
         }
-            return null;
+            return mapDesc;
     }
 
     public int getRunningArenasSize(){

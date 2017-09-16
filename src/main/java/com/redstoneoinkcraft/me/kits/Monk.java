@@ -55,24 +55,24 @@ public class Monk extends KitBase {
             melonMeta.setLore(melonLore);
             healMelon.setItemMeta(melonMeta);
         }
-        ItemStack healingPots = getPotionItemStack(PotionType.INSTANT_HEAL, 3, false, false, 5, "§c§lMonk's First Aid");
+        ItemStack healingPots = getPotionItemStack(PotionType.INSTANT_HEAL, 3, false, false, 2, "§c§lMonk's First Aid");
         ItemStack regenPots = getPotionItemStack(PotionType.REGEN, 2, false, false, 4, "§d§lMonk's Regen");
         ItemStack speedPots = getPotionItemStack(PotionType.SPEED, 2, false, false, 4, "§b§lMonk's Speed Force");
         ItemStack goldenApples = new ItemStack(Material.GOLDEN_APPLE, 2);
         addItem(knockbackStick);
         addItem(healMelon);
         addItem(healingPots);
-        addItem(regenPots);
-        addItem(speedPots);
+        // addItem(regenPots);
+        // addItem(speedPots);
         addItem(goldenApples);
 
         // Potion Effects
-        PotionEffect regen = new PotionEffect(PotionEffectType.REGENERATION, effectDuration, 2);
-        PotionEffect speed = new PotionEffect(PotionEffectType.SPEED, effectDuration, 2);
+        PotionEffect regen = new PotionEffect(PotionEffectType.REGENERATION, effectDuration, 1);
+        PotionEffect speed = new PotionEffect(PotionEffectType.SPEED, effectDuration, 1);
         PotionEffect resist = new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, effectDuration, 1);
         addPotionEffect(regen);
         addPotionEffect(speed);
-        addPotionEffect(resist);
+        // addPotionEffect(resist);
 
     }
 
