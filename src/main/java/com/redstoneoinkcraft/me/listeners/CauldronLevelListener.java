@@ -39,12 +39,8 @@ public class CauldronLevelListener implements Listener {
         Block involvedCauldronBlock = event.getBlock();
         FileConfiguration config = Main.getInstance().getConfig();
         for(String arenaName: config.getStringList("list-of-arenas")){
-            World world = event.getBlock().getWorld();
             Block blueCauldronBlock = ra.getBlueCauldron();
             Block redCauldronBlock = ra.getRedCauldron();
-            Cauldron involvedCauldron = (Cauldron) involvedCauldronBlock.getState().getData();
-            Cauldron blueCauldron = (Cauldron) blueCauldronBlock.getState().getData();
-            Cauldron redCauldron = (Cauldron) redCauldronBlock.getState().getData();
             if(!involvedCauldronBlock.equals(redCauldronBlock) && !involvedCauldronBlock.equals(blueCauldronBlock)){
                 return;
             }

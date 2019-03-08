@@ -45,7 +45,7 @@ public class CWarsMainCommand implements CommandExecutor {
 
         if(command.getName().equalsIgnoreCase("cauldronwars")){ // Command time!
             if(args.length < 1){
-                player.sendMessage("§7-+[§bCauldron §cWars §7Help Menu]+-");
+                player.sendMessage("§7-+§bCauldron §cWars §7by Mobkinz78 §8ver" + Main.getInstance().getDescription().getVersion() + "+-");
                 player.sendMessage("§7/cauldronwars list - List running arenas");
                 player.sendMessage("§7/cauldronwars create - Create a running arena");
                 player.sendMessage("§7/cauldronwars join - Join a running arena");
@@ -59,7 +59,7 @@ public class CWarsMainCommand implements CommandExecutor {
             }
             if(player.hasPermission("cauldronwars.leave")){
                 if(args.length < 1){
-                    player.sendMessage("§7-+[§bCauldron §cWars §7Help Menu]+-");
+                    player.sendMessage("§7-+§bCauldron §cWars §7by Mobkinz78 §8ver" + Main.getInstance().getDescription().getVersion() + "+-");
                     player.sendMessage("§7/cauldronwars list - List running arenas");
                     player.sendMessage("§7/cauldronwars create - Create a running arena");
                     player.sendMessage("§7/cauldronwars join - Join a running arena");
@@ -102,7 +102,7 @@ public class CWarsMainCommand implements CommandExecutor {
             }
             if(player.hasPermission("cauldronwars.use") || player.isOp()){ // Alright, if they do... here is the bulk of it all!
                 if(args.length == 0){
-                    player.sendMessage("§7-+[§bCauldron §cWars §7Help Menu]+-");
+                    player.sendMessage("§7-+§bCauldron §cWars §7by Mobkinz78 §8ver" + Main.getInstance().getDescription().getVersion() + "+-");
                     player.sendMessage("§7/cauldronwars list - List running arenas");
                     player.sendMessage("§7/cauldronwars create - Create a running arena");
                     player.sendMessage("§7/cauldronwars join - Join a running arena");
@@ -247,6 +247,10 @@ public class CWarsMainCommand implements CommandExecutor {
                             player.sendMessage(prefix + "Sorry, no arena with that ID is currently able to start.");
                             return false;
                         }
+                        if(currentArena.getPlayers().size() < 2) {
+                            player.sendMessage(prefix + "Sorry... there's only one person!");
+                            return true;
+                        }
                         ram.start(id);
                         for(Player player1 : currentArena.getPlayers()){
                             player1.sendMessage(prefix + "§dThe game has been force-started by " + player.getName());
@@ -299,7 +303,7 @@ public class CWarsMainCommand implements CommandExecutor {
                 }
 
                 else {
-                    player.sendMessage("§7-+[§bCauldron §cWars §7Help Menu]+-");
+                    player.sendMessage("§7-+§bCauldron §cWars §7by Mobkinz78 §8ver" + Main.getInstance().getDescription().getVersion() + "+-");
                     player.sendMessage("§7/cauldronwars list - List running arenas");
                     player.sendMessage("§7/cauldronwars create - Create a running arena");
                     player.sendMessage("§7/cauldronwars join - Join a running arena");

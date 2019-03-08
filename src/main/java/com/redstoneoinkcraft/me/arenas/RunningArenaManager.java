@@ -6,8 +6,10 @@ import com.redstoneoinkcraft.me.timers.GameStartTimer;
 import com.redstoneoinkcraft.me.timers.GatesOpenTimer;
 import com.redstoneoinkcraft.me.timers.ItemAboveHeadSpawner;
 import org.bukkit.*;
+import org.bukkit.block.Block;
 import org.bukkit.block.BlockState;
 import org.bukkit.block.Sign;
+import org.bukkit.block.data.Levelled;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
@@ -66,10 +68,6 @@ public class RunningArenaManager {
             player.sendMessage(prefix + "§cSorry, that arena could not be found!");
             return;
         }
-        if(isInGame(player) != null){
-            player.sendMessage(prefix + "You can not join more than one arena at a time.");
-            return;
-        }
 
         ra.getPlayers().add(player);
         Location lobby = ra.getLobby();
@@ -88,7 +86,7 @@ public class RunningArenaManager {
         if(playerAmount % 2 == 0){ // If the amount of players is even...
             ra.getTeamRed().add(player);
             player.sendTitle(prefix, "§cYou have been added to the red team!", 40, 80, 40);
-            ItemStack redWool = new ItemStack(Material.WOOL, 1, (byte) 14);
+            ItemStack redWool = new ItemStack(Material.RED_WOOL, 1);
             player.getInventory().setHelmet(redWool);
             for(Player player1 : ra.getPlayers()){
                 if(player.equals(player1)){
@@ -101,7 +99,7 @@ public class RunningArenaManager {
         if(playerAmount % 2  != 0){ // If the amount of players is odd...
             ra.getTeamBlue().add(player);
             player.sendTitle(prefix, "§bYou have been added to the blue team!", 40, 80, 40);
-            ItemStack blueWool = new ItemStack(Material.WOOL, 1, (byte) 11);
+            ItemStack blueWool = new ItemStack(Material.RED_WOOL, 1);
             player.getInventory().setHelmet(blueWool);
             for(Player player1 : ra.getPlayers()){
                 if(player.equals(player1)){
@@ -182,7 +180,7 @@ public class RunningArenaManager {
                     ra.getTeamBlue().add(lastPlayer);
                     lastPlayer.sendMessage(prefix + "You have been moved to balance teams.");
                     player.sendTitle(prefix, "§bYou have been added to the blue team!", 40, 80, 40);
-                    ItemStack blueWool = new ItemStack(Material.WOOL, 1, (byte) 11);
+                    ItemStack blueWool = new ItemStack(Material.BLUE_WOOL, 1);
                     player.getInventory().setHelmet(blueWool);
                 }
             }
@@ -196,7 +194,7 @@ public class RunningArenaManager {
                     ra.getTeamRed().add(lastPlayer);
                     lastPlayer.sendMessage(prefix + "You have been moved to balance teams.");
                     player.sendTitle(prefix, "§cYou have been added to the red team!", 40, 80, 40);
-                    ItemStack redWool = new ItemStack(Material.WOOL, 1, (byte) 14);
+                    ItemStack redWool = new ItemStack(Material.RED_WOOL, 1);
                     player.getInventory().setHelmet(redWool);
                 }
             }
@@ -287,12 +285,16 @@ public class RunningArenaManager {
                 /* Cauldron blueCauldron = (Cauldron) ra.getBlueCauldron().getState().getData();
                  *Cauldron redCauldron = (Cauldron) ra.getRedCauldron().getState().getData();
                  */
-                BlockState blueState = ra.getBlueCauldron().getState();
-                blueState.getData().setData((byte)3);
-                blueState.update();
-                BlockState redState = ra.getRedCauldron().getState();
-                redState.getData().setData((byte)3);
-                redState.update();
+
+                Block blueCauldron = ra.getBlueCauldron();
+                Levelled blueCauldronData = (Levelled) blueCauldron.getBlockData();
+                blueCauldronData.setLevel(blueCauldronData.getMaximumLevel());
+                blueCauldron.setBlockData(blueCauldronData);
+
+                Block redCauldron = ra.getRedCauldron();
+                Levelled redCauldronData = (Levelled) redCauldron.getBlockData();
+                redCauldronData.setLevel(blueCauldronData.getMaximumLevel());
+                redCauldron.setBlockData(redCauldronData);
 
                 GameStartTimer gst = new GameStartTimer();
                 ra.setGst(gst);

@@ -44,7 +44,7 @@ public class Monk extends KitBase {
         // Items
         ItemStack knockbackStick = new ItemStack(Material.STICK, 1);
         knockbackStick.addUnsafeEnchantment(Enchantment.KNOCKBACK, 2);
-        ItemStack healMelon = new ItemStack(Material.SPECKLED_MELON, 1);
+        ItemStack healMelon = new ItemStack(Material.GLISTERING_MELON_SLICE, 1);
         healMelon.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 1);
         {
             ItemMeta melonMeta = healMelon.getItemMeta();

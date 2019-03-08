@@ -50,50 +50,46 @@ public class PlayerHitListener implements Listener {
 
             ItemStack item = attacker.getInventory().getItemInMainHand();
 
-            // Same team special items
-            if(ra.getTeamBlue().contains(attacker) && ra.getTeamBlue().contains(defender)){
-
-                // Monk Items
-                if(item.getItemMeta().getDisplayName().equals("§6§lMonk's Healing Melon")){
-                    healOnMelonHit(attacker, defender);
-                    event.setCancelled(true);
-                    return;
-                }
-
-                else {
+                // Same team special items
+                if (ra.getTeamBlue().contains(attacker) && ra.getTeamBlue().contains(defender)) {
+                    if(item.hasItemMeta()) {
+                        // Monk Items
+                        if (item.getItemMeta().getDisplayName().equals("§6§lMonk's Healing Melon")) {
+                            healOnMelonHit(attacker, defender);
+                            event.setCancelled(true);
+                            return;
+                        }
+                    }
                     attacker.sendMessage(Main.getInstance().getPrefix() + "§c§lThat player is on your team!");
                     event.setCancelled(true);
                     return;
                 }
-            }
-            if(ra.getTeamRed().contains(attacker) && ra.getTeamRed().contains(defender)){
-                // Item exceptions go here
-
-                // Monk Items
-                if(item.getItemMeta().getDisplayName().equals("§6§lMonk's Healing Melon")){
-                    healOnMelonHit(attacker, defender);
-                    event.setCancelled(true);
-                    return;
-                }
-
-                else {
+                if (ra.getTeamRed().contains(attacker) && ra.getTeamRed().contains(defender)) {
+                    // Item exceptions go here
+                    if(item.hasItemMeta()) {
+                        // Monk Items
+                        if (item.getItemMeta().getDisplayName().equals("§6§lMonk's Healing Melon")) {
+                            healOnMelonHit(attacker, defender);
+                            event.setCancelled(true);
+                            return;
+                        }
+                    }
                     attacker.sendMessage(Main.getInstance().getPrefix() + "§c§lThat player is on your team!");
                     event.setCancelled(true);
                     return;
                 }
+            if(item.hasItemMeta()) {
+                // Different team special items
+                // Mummy Items
+                if (item.getItemMeta().getDisplayName().equals("§c§lSickening Flesh")) {
+                    hungerChanceWithFlesh(attacker, defender);
+                    return;
+                }
+                if (item.getItemMeta().getDisplayName().equals("§7§lLeftover Mummy Wraps")) {
+                    cobwebsChanceOnHit(attacker, defender);
+                    return;
+                }
             }
-
-            // Different team special items
-            // Mummy Items
-            if(item.getItemMeta().getDisplayName().equals("§c§lSickening Flesh")){
-                hungerChanceWithFlesh(attacker, defender);
-                return;
-            }
-            if(item.getItemMeta().getDisplayName().equals("§7§lLeftover Mummy Wraps")){
-                cobwebsChanceOnHit(attacker, defender);
-                return;
-            }
-
         }
         if(event.getDamager() instanceof Projectile && event.getEntity() instanceof Player){
             ProjectileSource projSource = ((Projectile) event.getDamager()).getShooter();
@@ -167,7 +163,7 @@ public class PlayerHitListener implements Listener {
             int defLocY = defLoc.getBlockY();
             int defLocZ = defLoc.getBlockZ();
             if(defLoc.getBlock().getType().equals(Material.AIR)){ // Block at feet
-                defLoc.getBlock().setType(Material.WEB);
+                defLoc.getBlock().setType(Material.COBWEB);
                 cobwebsToClear.add(defLoc);
             }
             // Time to try this the simple yet tedious way!
@@ -190,7 +186,7 @@ public class PlayerHitListener implements Listener {
             blocksToWebs.add(oneDownOneLeft);
             for(Location loc : blocksToWebs){
                 if(loc.getBlock().getType().equals(Material.AIR)){
-                    loc.getBlock().setType(Material.WEB);
+                    loc.getBlock().setType(Material.COBWEB);
                     cobwebsToClear.add(loc);
                 }
             }
@@ -220,7 +216,7 @@ class MummyTimer extends BukkitRunnable{
     public void run(){
         if(this.counter == 0) {
             for (Location loc : cobwebsToClear) {
-                if(loc.getBlock().getType().equals(Material.WEB)) loc.getBlock().setType(Material.AIR);
+                if(loc.getBlock().getType().equals(Material.COBWEB)) loc.getBlock().setType(Material.AIR);
             }
             this.cancel();
         }

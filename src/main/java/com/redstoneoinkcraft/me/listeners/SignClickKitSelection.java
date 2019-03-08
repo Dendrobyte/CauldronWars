@@ -36,7 +36,7 @@ public class SignClickKitSelection implements Listener {
         String prefix = Main.getInstance().getPrefix();
 
         if(event.getAction() == Action.RIGHT_CLICK_BLOCK){
-            if(blockClicked.getType().equals(Material.WALL_SIGN) || blockClicked.getType().equals(Material.SIGN_POST)){
+            if(blockClicked.getType().equals(Material.WALL_SIGN) || blockClicked.getType().equals(Material.SIGN)){
                 Sign sign = (Sign) blockClicked.getState();
                 String line1 = sign.getLine(0); // Main Headline
                 String line2 = sign.getLine(1); // Kit Name

@@ -60,19 +60,16 @@ public class BottleSpawnTimer extends BukkitRunnable {
         if (timer == 0) {
             this.arenaIDForBottleSpawning = ra.getId();
             ItemStack bottle = bottleSpawning.generateBottle(ra);
-            Location spawnLoc = null;
+            Location spawnLoc = bottleSpawning.generateBottleLocation(ra);
 
             while(spawnLoc == null){ // While it's null (y value is has void under it) get a new location
                 spawnLoc = bottleSpawning.generateBottleLocation(ra);
             }
+            // TODO: Particles lag like a mother huther
             Location spawnParticlesLoc = new Location(ra.getLobby().getWorld(), spawnLoc.getX(), spawnLoc.getY() + 20, spawnLoc.getZ());
-            spawnParticles(spawnParticlesLoc, 20);
+            ra.getPlayers().get(0).playSound(spawnParticlesLoc, Sound.ENTITY_GENERIC_EXPLODE, 3.0f, 5.0f);
+            spawnParticles(spawnParticlesLoc, 10);
 
-            if(bottle.equals(null)){
-                System.out.println("Something went wrong with the bottle timer.");
-                cancel();
-                return;
-            }
             World world = ra.getLobby().getWorld();
             if(!ra.getGameState().equals(RunningArena.GameState.IN_PROGRESS)){
                 cancel();

@@ -23,7 +23,7 @@ public class GameStartTimer extends BukkitRunnable {
     int timeRemaining;
 
     public GameStartTimer(){
-        this.timeRemaining = 30;
+        this.timeRemaining = 5;
     }
 
     public void setRa(RunningArena ra){

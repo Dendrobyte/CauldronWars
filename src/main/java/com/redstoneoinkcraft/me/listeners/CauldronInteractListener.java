@@ -7,6 +7,7 @@ import com.redstoneoinkcraft.me.timers.BottleSpawnTimer;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockState;
+import org.bukkit.block.data.Levelled;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -17,7 +18,6 @@ import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.material.Cauldron;
-import org.bukkit.material.MaterialData;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
@@ -48,7 +48,6 @@ public class CauldronInteractListener implements Listener {
         bottle.addUnsafeEnchantment(Enchantment.DURABILITY, 10);
         bottle.setItemMeta(bottleMeta);
 
-        ItemStack waterBottle = new ItemStack(Material.POTION);
 
         if(event.getAction() == Action.RIGHT_CLICK_BLOCK){
             if(event.getHand().equals(EquipmentSlot.HAND)){
@@ -62,22 +61,33 @@ public class CauldronInteractListener implements Listener {
                     if(heldItem.equals(bottle)) {
                         String prefix = Main.getInstance().getPrefix();
 
+                        /*
+
+                        Block redCauldron = ra.getRedCauldron();
+                        Levelled redCauldronData = (Levelled) redCauldron;
+                        redCauldronData.setLevel(blueCauldronData.getMaximumLevel());
+                        redCauldron.setBlockData(redCauldronData);
+
+                         */
+
+                        // Cauldron data
                         Block cauldron = clickedBlock;
+                        Levelled cauldronData = (Levelled) cauldron.getBlockData();
+
                         PotionEffect sideEffect1 = new PotionEffect(PotionEffectType.BLINDNESS, 999999, 1);
                         PotionEffect sideEffect2 = new PotionEffect(PotionEffectType.WEAKNESS, 999999, 4);
                         if (clickedBlock.equals(ra.getBlueCauldron())) {
-                            BlockState cauldState = clickedBlock.getState();
+
                             // Full
-                            MaterialData md = cauldState.getData();
-                            if (clickedBlock.getData() == (byte)3) {
+                            if (cauldronData.getLevel() == cauldronData.getMaximumLevel()) {
                                 event.setCancelled(true); // I'm controlling the levels
                                 if (ra.getTeamBlue().contains(player)) {
                                     player.sendMessage(prefix + "That is your team's cauldron!");
                                     return;
                                 }
                                 if (ra.getTeamRed().contains(player)) {
-                                    cauldState.getData().setData((byte) 2);
-                                    cauldState.update();
+                                    cauldronData.setLevel(cauldronData.getMaximumLevel()-1);
+                                    cauldron.setBlockData(cauldronData);
                                     for (Player player1 : ra.getPlayers()) {
                                         player1.sendMessage(prefix + "§c§l" + player.getName() + " §7emptied §b§lTeam Blue's§r§7 cauldron!");
                                         player1.sendMessage(prefix + "§b§lTeam Blue's§r§7 cauldron is now 2 levels full.");
@@ -87,15 +97,15 @@ public class CauldronInteractListener implements Listener {
                                 }
                             }
                             // Nearly full
-                            if (cauldron.getData() == (byte) 2) {
+                            if (cauldronData.getLevel() == cauldronData.getMaximumLevel()-1) {
                                 event.setCancelled(true);
                                 if (ra.getTeamBlue().contains(player)) {
                                     player.sendMessage(prefix + "That is your team's cauldron!");
                                     return;
                                 }
                                 if (ra.getTeamRed().contains(player)) {
-                                    cauldState.getData().setData((byte) 1);
-                                    cauldState.update();
+                                    cauldronData.setLevel(cauldronData.getMaximumLevel()-2);
+                                    cauldron.setBlockData(cauldronData);
                                     for (Player player1 : ra.getPlayers()) {
                                         player1.sendMessage(prefix + "§c§l" + player.getName() + " §7emptied §b§lTeam Blue's§r§7 cauldron!");
                                         player1.sendMessage(prefix + "§b§lTeam Blue's§r§7 cauldron is now 1 level full.");
@@ -105,15 +115,15 @@ public class CauldronInteractListener implements Listener {
                                 }
                             }
                             // Nearly empty
-                            if (cauldron.getData() == (byte) 1) {
+                            if (cauldronData.getLevel() == cauldronData.getMaximumLevel()-2) {
                                 event.setCancelled(true);
                                 if (ra.getTeamBlue().contains(player)) {
                                     player.sendMessage(prefix + "That is your team's cauldron!");
                                     return;
                                 }
                                 if (ra.getTeamRed().contains(player)) {
-                                    cauldState.getData().setData((byte) 0);
-                                    cauldState.update();
+                                    cauldronData.setLevel(cauldronData.getMaximumLevel()-3);
+                                    cauldron.setBlockData(cauldronData);
                                     for (Player player1 : ra.getPlayers()) {
                                         player1.sendMessage(prefix + "§c§l" + player.getName() + " §7emptied §b§lTeam Blue's§r§7 cauldron!");
                                         player1.sendMessage(prefix + "§b§lTeam Blue's§r§7 cauldron is now empty");
@@ -125,21 +135,19 @@ public class CauldronInteractListener implements Listener {
                                 }
                             }
                             // Empty
-                            if (cauldron.getData() == (byte) 0) {
+                            if (cauldronData.getLevel() == 0) {
                                 // This is not a possible value to get, seeing as the game would be over if the cauldron was empty
                                 return;
                             }
                             return;
                         }
                         if (clickedBlock.equals(ra.getRedCauldron())) {
-                            BlockState cauldState = clickedBlock.getState();
-                            //System.out.println("Cauldron equals red cauldron!");
                             // Full
                             event.setCancelled(true); // I'm controlling the levels
-                            if (clickedBlock.getData() == ((byte) 3)) {
+                            if (cauldronData.getLevel() == cauldronData.getMaximumLevel()) {
                                 if (ra.getTeamBlue().contains(player)) {
-                                    cauldState.getData().setData((byte) 2);
-                                    cauldState.update();
+                                    cauldronData.setLevel(cauldronData.getMaximumLevel()-1);
+                                    cauldron.setBlockData(cauldronData);
                                     for (Player player1 : ra.getPlayers()) {
                                         player1.sendMessage(prefix + "§b§l" + player.getName() + " §7emptied §c§lTeam Red's§r§7 cauldron!");
                                         player1.sendMessage(prefix + "§c§lTeam Red's§r§7 cauldron is now 2 levels full.");
@@ -153,11 +161,11 @@ public class CauldronInteractListener implements Listener {
                                 }
                             }
                             // Nearly full
-                            if (cauldron.getData() == (byte) 2) {
+                            if (cauldronData.getLevel() == cauldronData.getMaximumLevel()-1) {
                                 event.setCancelled(true);
                                 if (ra.getTeamBlue().contains(player)) {
-                                    cauldState.getData().setData((byte) 1);
-                                    cauldState.update();
+                                    cauldronData.setLevel(cauldronData.getMaximumLevel()-2);
+                                    cauldron.setBlockData(cauldronData);
                                     for (Player player1 : ra.getPlayers()) {
                                         player1.sendMessage(prefix + "§b§l" + player.getName() + " §7emptied §c§lTeam Red's§r§7 cauldron!");
                                         player1.sendMessage(prefix + "§c§lTeam Red's§r§7 cauldron is now 1 level full.");
@@ -171,11 +179,11 @@ public class CauldronInteractListener implements Listener {
                                 }
                             }
                             // Nearly empty
-                            if (cauldron.getData() == (byte) 1) {
+                            if (cauldronData.getLevel() == cauldronData.getMaximumLevel()-2) {
                                 event.setCancelled(true);
                                 if (ra.getTeamBlue().contains(player)) {
-                                    cauldState.getData().setData((byte) 0);
-                                    cauldState.update();
+                                    cauldronData.setLevel(cauldronData.getMaximumLevel()-3);
+                                    cauldron.setBlockData(cauldronData);
                                     for (Player player1 : ra.getPlayers()) {
                                         player1.sendMessage(prefix + "§b§l" + player.getName() + " §7emptied §c§lTeam Red's§r§7 cauldron!");
                                         player1.sendMessage(prefix + "§c§lTeam Red's§r§7 cauldron is empty.");
@@ -191,7 +199,7 @@ public class CauldronInteractListener implements Listener {
                                 }
                             }
                             // Empty
-                            if (cauldron.getData() == (byte) 0) {
+                            if (cauldronData.getLevel() == 0) {
                                 // This is not a possible value to get, seeing as the game would be over if the cauldron was empty
                                 return;
                             }

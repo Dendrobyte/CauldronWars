@@ -2,7 +2,6 @@ package com.redstoneoinkcraft.me.timers;
 
 import com.redstoneoinkcraft.me.Main;
 import com.redstoneoinkcraft.me.arenas.RunningArena;
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -11,7 +10,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.scheduler.BukkitTask;
 import org.bukkit.util.Vector;
 
 /**
@@ -26,12 +24,6 @@ public class ItemAboveHeadSpawner extends BukkitRunnable {
 
     RunningArena ra;
 
-    private ItemStack blueWool = new ItemStack(Material.WOOL, 1, (byte)11);
-    ItemMeta blueWoolMeta = blueWool.getItemMeta();
-
-    private ItemStack redWool = new ItemStack(Material.WOOL, 1, (byte)14);
-    ItemMeta redWoolMeta = redWool.getItemMeta();
-
     public ItemAboveHeadSpawner(RunningArena ra){
         this.ra = ra;
         // Spawns wool block above head every 5 ticks while in the game
@@ -41,37 +33,34 @@ public class ItemAboveHeadSpawner extends BukkitRunnable {
     public void run(){
         for(Player player : ra.getPlayers()){
             if(ra.getTeamBlue().contains(player)){
-                World world = ra.getLobby().getWorld();
-                double newLocY = player.getEyeLocation().getY();
-                Location itemLoc = new Location(world, player.getEyeLocation().getX(), newLocY, player.getEyeLocation().getZ());
-                final Entity droppedItemBlue = world.dropItem(itemLoc, blueWool);
-                droppedItemBlue.setVelocity(new Vector(0.00, 0.40, 0.00));
-                new BukkitRunnable(){
-                    @Override
-                    public void run() {
-                        droppedItemBlue.remove();
-                    }
-
-                }.runTaskLater(Main.getInstance(), 10L);
+                removeDroppedItems(ra, player, true);
             }
 
             // TODO: See how it looks from eye location
 
             if(ra.getTeamRed().contains(player)){
-                World world = ra.getLobby().getWorld();
-                double newLocY = player.getEyeLocation().getY();
-                Location itemLoc = new Location(world, player.getEyeLocation().getX(), newLocY, player.getEyeLocation().getZ());
-                final Entity droppedItemRed = world.dropItem(itemLoc, redWool);
-                droppedItemRed.setVelocity(new Vector(0.00, 0.40, 0.00));
-                new BukkitRunnable(){
-                    @Override
-                    public void run() {
-                        droppedItemRed.remove();
-                    }
-
-                }.runTaskLater(Main.getInstance(), 10L);
+                removeDroppedItems(ra, player, false);
             }
         }
     }
 
+    // true = blue, false = red
+    public void removeDroppedItems(RunningArena ra, Player player, boolean team){
+        ItemStack wool;
+        if(team) wool = new ItemStack(Material.BLUE_WOOL, 1);
+        else wool = new ItemStack(Material.RED_WOOL, 1);
+        World world = ra.getLobby().getWorld();
+        double newLocY = player.getEyeLocation().getY();
+        Location itemLoc = new Location(world, player.getEyeLocation().getX(), newLocY, player.getEyeLocation().getZ());
+        final Entity droppedItem = world.dropItem(itemLoc, wool);
+        droppedItem.setVelocity(new Vector(0.00, 0.40, 0.00));
+        new BukkitRunnable(){
+            @Override
+            public void run() {
+                droppedItem.remove();
+            }
+
+        }.runTaskLater(Main.getInstance(), 10L);
+    }
 }
+

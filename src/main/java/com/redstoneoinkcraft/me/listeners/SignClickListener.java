@@ -34,7 +34,7 @@ public class SignClickListener implements Listener {
         String prefix = Main.getInstance().getPrefix();
 
         if(event.getAction() == Action.RIGHT_CLICK_BLOCK){
-            if(blockClicked.getType().equals(Material.WALL_SIGN) || blockClicked.getType().equals(Material.SIGN_POST)){
+            if(blockClicked.getType().equals(Material.WALL_SIGN) || blockClicked.getType().equals(Material.WALL_SIGN)){
                 Sign sign = (Sign) blockClicked.getState();
                 String line1 = sign.getLine(0); // Main Headline
                 String line2 = sign.getLine(1); // Create/Join keyword
@@ -59,7 +59,7 @@ public class SignClickListener implements Listener {
 
                     // Create a game
                     if(line2.equalsIgnoreCase("create")){
-                        if(!bSignBlock.getType().equals(Material.WALL_SIGN) || blockClicked.getType().equals(Material.SIGN_POST)){
+                        if(!bSignBlock.getType().equals(Material.WALL_SIGN)){
                             player.sendMessage(prefix + "There is no sign below to make this arena joinable!");
                             return;
                         }
@@ -115,6 +115,10 @@ public class SignClickListener implements Listener {
                                 player.sendMessage(prefix + "It appears no arena with that ID is currently started.");
                                 return;
                             }
+                            if(ram.isInGame(player) != null){
+                                player.sendMessage(prefix + "You can not be in more than one game!");
+                                return;
+                            }
                             if(joinArena.getGameState() == RunningArena.GameState.STARTING){
                                 ram.addPlayer(player, line3ID);
                                 return;
@@ -168,7 +172,7 @@ public class SignClickListener implements Listener {
         }
 
         if(event.getAction() == Action.LEFT_CLICK_BLOCK){ // In case they left click, do nothing! Nothing would happen anyway so this is pointless \o/
-            if(blockClicked.getType().equals(Material.WALL_SIGN) || blockClicked.getType().equals(Material.SIGN_POST)){
+            if(blockClicked.getType().equals(Material.WALL_SIGN)){
                 Sign sign = (Sign) blockClicked.getState();
                 if(sign.getLine(0).contains("[CauldronWars]")){
                     // event.setCancelled(true);

@@ -8,7 +8,7 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerPickupItemEvent;
+import org.bukkit.event.entity.EntityPickupItemEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
@@ -27,8 +27,9 @@ public class PotionPickupListener implements Listener {
     RunningArenaManager ram = RunningArenaManager.getManager();
 
     @EventHandler
-    public void potionPickupByPlayer(PlayerPickupItemEvent event){
-        Player player = event.getPlayer();
+    public void potionPickupByPlayer(EntityPickupItemEvent event){
+        if(!(event.getEntity() instanceof Player)) return;
+        Player player = (Player) event.getEntity();
         RunningArena ra = ram.isInGame(player);
         ItemStack pickedUp = event.getItem().getItemStack();
 
@@ -50,7 +51,7 @@ public class PotionPickupListener implements Listener {
             return;
         }
         if(ra != null){
-            if(pickedUp.equals(new ItemStack(Material.WOOL))){
+            if(pickedUp.getType().toString().contains("WOOL")){
                 pickedUp.setAmount(0);
                 event.setCancelled(true);
                 return;

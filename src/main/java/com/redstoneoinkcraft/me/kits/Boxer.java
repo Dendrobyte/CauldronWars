@@ -36,7 +36,7 @@ public class Boxer extends KitBase {
 
         // Items
         ItemStack godApples = new ItemStack(Material.GOLDEN_APPLE, 1, (short) 1);
-        ItemStack porkchops = new ItemStack(Material.GRILLED_PORK, 16);
+        ItemStack porkchops = new ItemStack(Material.COOKED_PORKCHOP, 16);
         ItemStack regenPotion = getPotionItemStack(PotionType.SPEED, 1, false, false, 1, "§c§lBoxer's Adrenaline");
         addItem(godApples);
         addItem(porkchops);

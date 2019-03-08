@@ -48,7 +48,8 @@ public class KitManager {
             //player.sendMessage(Main.getInstance().getPrefix() + "There seems to have been an issue with your kit... please contact an administrator.");
             ra.getPlayerKits().put(player, kit);
         } else if (ra.getPlayerKits().containsKey(player)){
-            ra.getPlayerKits().replace(player, kit);
+            ra.getPlayerKits().remove(player);
+            ra.getPlayerKits().put(player, kit);
         }
 
         // Add the armor - MUST go Helmet > Chestplate > Leggings > Boots
@@ -64,14 +65,14 @@ public class KitManager {
 
         // Add in the wool that is their team color.
         if(ra.getTeamBlue().contains(player)){
-            ItemStack blueWool = new ItemStack(Material.WOOL, 1, (byte)11);
+            ItemStack blueWool = new ItemStack(Material.BLUE_WOOL, 1, (byte)11);
             ItemMeta blueWoolMeta = blueWool.getItemMeta();
             blueWoolMeta.setDisplayName("§b§lYou are on the blue team!");
             blueWool.setItemMeta(blueWoolMeta);
             player.getInventory().setItem(8, blueWool);
         }
         if(ra.getTeamRed().contains(player)){
-            ItemStack redWool = new ItemStack(Material.WOOL, 1, (byte)14);
+            ItemStack redWool = new ItemStack(Material.RED_WOOL, 1, (byte)14);
             ItemMeta redWoolMeta = redWool.getItemMeta();
             redWoolMeta.setDisplayName("§c§lYou are on the red team!");
             redWool.setItemMeta(redWoolMeta);

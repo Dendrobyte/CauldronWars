@@ -56,7 +56,7 @@ public class KitSelectionInventory {
         archer.setItemMeta(archerMeta);
     }
 
-    ItemStack monk = new ItemStack(Material.SPECKLED_MELON, 1);
+    ItemStack monk = new ItemStack(Material.GLISTERING_MELON_SLICE, 1);
     {
         monk.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 2);
         ItemMeta monkMeta = monk.getItemMeta();
@@ -93,7 +93,7 @@ public class KitSelectionInventory {
         ghost.setItemMeta(ghostMeta);
     }
 
-    ItemStack mummy = new ItemStack(Material.WEB, 1);
+    ItemStack mummy = new ItemStack(Material.COBWEB, 1);
     {
         mummy.addUnsafeEnchantment(Enchantment.KNOCKBACK, 2);
         ItemMeta mummyMeta = mummy.getItemMeta();

@@ -65,7 +65,7 @@ public class Mummy extends KitBase {
             fleshMeta.setLore(fleshLore);
             flesh.setItemMeta(fleshMeta);
         }
-        ItemStack cobweb = new ItemStack(Material.WEB);
+        ItemStack cobweb = new ItemStack(Material.COBWEB);
         cobweb.addUnsafeEnchantment(Enchantment.DURABILITY, 10);
         {
             ItemMeta webMeta = cobweb.getItemMeta();

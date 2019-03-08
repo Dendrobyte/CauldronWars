@@ -36,7 +36,7 @@ public class Ghost extends KitBase {
         addArmorItem(boots);
 
         // Items
-        ItemStack flameCharge = new ItemStack(Material.FIREBALL, 1);
+        ItemStack flameCharge = new ItemStack(Material.FIRE_CHARGE, 1);
             ItemMeta flameChargeMeta = flameCharge.getItemMeta();
             flameChargeMeta.setDisplayName("§c§lGhost Ember");
             /* List<String> flameChargeLore = flameChargeMeta.getLore();

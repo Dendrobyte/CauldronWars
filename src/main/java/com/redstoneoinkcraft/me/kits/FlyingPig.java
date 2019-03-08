@@ -23,7 +23,7 @@ public class FlyingPig extends KitBase {
         super("FlyingPig");
         int effectDuration = 999999;
         // Armor
-        ItemStack helmet = new ItemStack(Material.GOLD_HELMET, 1);
+        ItemStack helmet = new ItemStack(Material.GOLDEN_HELMET, 1);
         helmet.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
         helmet.addUnsafeEnchantment(Enchantment.DURABILITY, 10);
         ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE, 1);

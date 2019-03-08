@@ -67,6 +67,7 @@ public class BottleSpawning {
             maxZ = secondBound.getZ();
             minZ = firstBound.getZ();
         }
+
         // Cast 'em into integers!
         maxIntX = (int) maxX;
         minIntX = (int) minX;
@@ -83,21 +84,18 @@ public class BottleSpawning {
 
         bottleSpawnLocation = new Location(arena.getLobby().getWorld(), locX, locY, locZ);
 
-        ArrayList<Block> blocksOnYAxis = new ArrayList<>();
-        for(int i = 1; i < locY + 20; i++){
-            Location addLoc = new Location(arena.getLobby().getWorld(), locX, i, locZ);
-            blocksOnYAxis.add(addLoc.getBlock());
-        }
-        for(Block block : blocksOnYAxis){
-            if(!block.getType().equals(Material.AIR) && !block.getType().equals(Material.WATER) && !block.getType().equals(Material.STATIONARY_WATER)){
-                return bottleSpawnLocation;
-            } else {
-                continue;
+        boolean blockHit = false;
+        for(int i = 0; i < 256; i++){
+            Location checkLoc = new Location(arena.getLobby().getWorld(), locX, i, locZ);
+            if(!checkLoc.getBlock().getType().equals(Material.AIR)){
+                blockHit = true;
+                break;
             }
         }
-        // Location bottleSpawnLocation = new Location(arena.getLobby().getWorld(), -2582, 186, -1489);
-        return null;
 
+        if(!blockHit) bottleSpawnLocation = null;
+
+        return bottleSpawnLocation;
     }
 
     public ItemStack generateBottle(RunningArena arena){
